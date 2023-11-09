@@ -1,0 +1,172 @@
+.mainvisual {
+    display: flex;
+    position: relative;
+    height: calc(100vh - 11.4rem);
+    background: #F9F9F9;
+
+    .left-wrapper {
+        display: block;
+        position: relative;
+        margin: auto 0 auto 8rem;
+        z-index: 5;
+        .part1 {
+            margin-bottom: 4.0rem;
+            @media only screen and (max-width: 1440px) {
+                margin-bottom: 2.4rem;
+            }
+        }
+        .part2 {
+            margin-bottom: 2.0rem;
+        }
+        .part3 {
+            margin-bottom: 4.8rem;
+            @media only screen and (max-width: 1440px) {
+                margin-bottom: 3.6rem;
+            }
+        }
+        .part4 {
+            margin-bottom: 6.4rem;
+            line-height: 3.8rem;
+            @media only screen and (max-width: 1440px) {
+                margin-bottom: 4.4rem;
+                line-height: 3.0rem;
+            }
+        }
+        .btn-wrapper {
+            display: block;
+            position: relative;
+            width: fit-content;
+            text-align: center;
+            p {
+                margin-bottom: 1.2rem;
+            }
+            .animation-btn {
+                width: 37.2rem;
+                height: 9.0rem;
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .img1 {
+        position: absolute;
+        width: 38%;
+        left: calc(50% - 6rem);
+        top: calc(50% - 8rem);
+        z-index: 3;
+    }
+
+    .img2 {
+        height: 66vh;
+        aspect-ratio: 628 / 779 !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .img3 {
+        width: 18%;
+        position: absolute;
+        bottom: 10vh;
+        right: 2rem;
+    }
+}
+
+.section1 {
+    background: #FFF;
+    padding: 4.0rem 0 12.8rem 0;
+    .top-img {
+        display: block;
+        width: 81.6rem;
+        margin: 0 auto 7.6rem auto;
+    }
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 3.2rem;
+        .text-wrapper {
+            .title {
+                margin-bottom: 2.4rem;
+                line-height: 4.8rem;
+            }
+            .content {
+                line-height: 3.2rem;
+            }
+        }
+        img {
+            width: 56.1rem;
+        }
+    }
+}
+
+.section2 {
+    background: #F9F9F9;
+    padding: 12rem 0 10.6rem 0;
+    .top-text {
+        display: block;
+        margin: 0 auto 8.4rem auto;
+        text-align: center;
+        line-height: 5.6rem;
+    }
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 6.2rem;
+        .left-right {
+            display: flex;
+            flex-direction: column;
+            row-gap: 3.2rem;
+            width: 30%;
+        }
+        .item-wrapper {
+            border-radius: 16px;
+            .yellow-pannel {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2.0rem 1.8rem;
+                background: #FFFE3B;
+                border-radius: 16px 16px 0 0;
+            }
+            .img-wrapper {
+                width: 100%;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 5 / 4;
+                background: #FFF;
+                border-radius: 0 0 16px 16px;
+                .main-img {
+                    width: 80%;
+                }
+                .mini-img {
+                    position: absolute;
+                    bottom: -2.2rem;
+                }
+            }
+        }
+        .left-wrapper {
+            .item-wrapper {
+                .img-wrapper {
+                    .mini-img {
+                        right: -2.6rem;
+                    }
+                }
+            }
+        }
+        .right-wrapper {
+            .item-wrapper {
+                .img-wrapper {
+                    .mini-img {
+                        left: -2.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

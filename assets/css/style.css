@@ -84,7 +84,7 @@ textarea {
           box-sizing: border-box;
   padding: 1.7rem 1.8rem;
   width: 100%;
-  text-align: left;
+  text-align: left !important;
   letter-spacing: 0.08em;
   color: #333;
 }
@@ -150,6 +150,7 @@ select {
   font-weight: 400;
   line-height: 100%;
   padding: 0 1.7rem;
+  text-align: left !important;
 }
 
 /* checkbox */
@@ -301,8 +302,7 @@ figure img,
   }
 }
 
-.animation-btn {
-  cursor: pointer;
+.btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,181 +313,154 @@ figure img,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
   width: 20.8rem;
   height: 5.0rem;
-  color: #333;
   border: 3px solid #333;
   border-radius: 90px;
-  /* 112.5% */
+  height: 4.6rem;
+  padding: 1.6rem 3.2rem 1.6rem 2.4rem;
+  background: #FFFE3B;
+  color: #333;
+  letter-spacing: 0.08em;
+  text-align: left;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   overflow: hidden;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  cursor: pointer;
+  z-index: 0;
 }
 
-.animation-btn:after {
+.btn span {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  padding-top: 0.2rem;
+  z-index: 3;
+}
+
+.btn::before {
   content: "";
   position: absolute;
-  height: 0%;
-  left: 50%;
-  top: 50%;
-  width: 150%;
-  z-index: 0;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #333;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1), -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  z-index: 1;
 }
 
-.animation-btn span {
-  position: relative;
-  z-index: 3;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+.btn:hover {
+  color: #FFFFFF;
 }
 
-.animation-btn:hover span {
-  text-shadow: none;
+.btn:hover::before {
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
-.animation-btn:hover:after {
-  height: 450%;
-}
-
-.btn-yellow {
+.btn-yellow.btn {
   background: #FFFE3B;
-  border: 2px solid #333;
-}
-
-.btn-yellow span {
+  border: 3px solid #333;
   color: #333;
 }
 
-.btn-yellow:hover span {
+.btn-yellow.btn:hover span {
   color: #FFF;
   z-index: 15;
 }
 
-.btn-yellow:after {
-  background: #333;
-  opacity: .5;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
+.btn-yellow-b.btn {
+  background: #FFFE3B;
+  border: 4px solid #333;
+  padding: 3.3rem 8.6rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 9.0rem;
+  color: #333;
 }
 
-.btn-yellow:hover:after {
-  height: 140%;
-  opacity: 1;
+.btn-yellow-b.btn:hover span {
+  color: #FFF;
+  z-index: 15;
 }
 
-.btn-black {
+.btn-black.btn {
   background: #333;
   border: 3px solid #333;
-}
-
-.btn-black.animation-btn {
   height: 6.4rem;
   padding: 1.6rem 6.4rem;
-}
-
-.btn-black span {
   color: #FFF;
 }
 
-.btn-black:hover span {
+.btn-black.btn:hover span {
   color: #333;
   z-index: 15;
 }
 
-.btn-black:after {
+.btn-black.btn::before {
   background: #FFFE3B;
-  opacity: .5;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
 }
 
-.btn-black:hover:after {
-  height: 140%;
-  opacity: 1;
-}
-
-.btn-white {
-  background: #FFF;
+.btn-white.btn {
+  background: #fff;
   border: 3px solid #333;
-}
-
-.btn-white.animation-btn {
   height: 6.4rem;
-}
-
-.btn-white span {
+  padding: 1.6rem 6.4rem;
   color: #333;
 }
 
-.btn-white:hover span {
+.btn-white.btn:hover span {
   color: #333;
   z-index: 15;
 }
 
-.btn-white:after {
+.btn-white.btn::before {
   background: #FFFE3B;
-  opacity: .5;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
 }
 
-.btn-white:hover:after {
-  height: 140%;
-  opacity: 1;
-}
-
-.animation-btn.btn-faq {
-  border-radius: 8px;
+.btn-faq.btn {
   padding: 1.6rem 4.0rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.btn-faq {
+  height: 5.0rem;
   white-space: nowrap;
+  color: #FFF;
   background: #333;
   border: 3px solid #333;
+  border-radius: 8px;
 }
 
-.btn-faq.active {
+.btn-faq.btn.active {
   background: #FFF;
-}
-
-.btn-faq.active:after {
-  background: unset;
-}
-
-.btn-faq span {
-  color: #FFF;
-}
-
-.btn-faq.active span {
   color: #333;
 }
 
-.btn-faq:hover span {
+.btn-faq.btn:hover span {
   color: #333;
   z-index: 15;
 }
 
-.btn-faq:after {
+.btn-faq.btn::before {
   background: #FFF;
-  opacity: .5;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
-}
-
-.btn-faq:hover:after {
-  height: 140%;
-  opacity: 1;
 }
 
 header {
@@ -536,7 +509,11 @@ header .header-wrapper .right-wrapper {
           column-gap: 1.6rem;
 }
 
-header .btn-black.animation-btn {
+header .btn-yellow.btn {
+  border: 3px solid #333;
+}
+
+header .btn-black.btn {
   height: 5.0rem;
   white-space: nowrap;
 }
@@ -573,7 +550,7 @@ header .btn-black.animation-btn {
 .font-16-500 {
   color: #333;
   text-align: center;
-  font-family: "Noto Sans CJK JP";
+  font-family: "Noto Sans JP";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -885,12 +862,16 @@ header .btn-black.animation-btn {
   line-height: 2.4rem;
 }
 
-.main-form .btn-black {
+.main-form .btn {
   padding: 2.3rem 6.4rem;
   height: 6.4rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.main-form .btn-black::before {
+  background: #FFFE3B;
 }
 
 .main-form .btns-wrapper {
@@ -957,6 +938,7 @@ input[type=checkbox]:checked:before {
 
 .top-page {
   margin-top: 11.4rem;
+  overflow: auto;
 }
 
 .top-page .mainvisual {
@@ -1011,6 +993,10 @@ input[type=checkbox]:checked:before {
   }
 }
 
+.top-page .mainvisual .left-wrapper .btn-wrapper {
+  text-align: center;
+}
+
 .top-page .mainvisual .img1 {
   position: absolute;
   width: 38%;
@@ -1021,10 +1007,11 @@ input[type=checkbox]:checked:before {
 
 .top-page .mainvisual .img2 {
   height: 66vh;
-  aspect-ratio: 628 / 779 !important;
+  aspect-ratio: 2261 / 2263 !important;
   position: absolute;
   top: 0;
   right: 0;
+  margin-right: -16vh;
 }
 
 .top-page .mainvisual .img3 {
@@ -1592,15 +1579,18 @@ input[type=checkbox]:checked:before {
   background: rgba(255, 255, 255, 0.01);
 }
 
+.top-page .faq-section #faq-container li {
+  border-radius: 8px;
+}
+
 .top-page .faq-section #faq-container li h4 {
   cursor: pointer;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   border: 1px solid #FFF;
-  border-radius: 8px;
   background: #FFF;
   margin-top: 2.4rem;
-  padding: 2.4rem 3.2rem;
+  padding: 0 3.2rem;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1615,7 +1605,7 @@ input[type=checkbox]:checked:before {
 
 .top-page .faq-section #faq-container li h4:hover:not(.header) {
   background-color: #ebf0f8;
-  border: 1px solid lightgray;
+  border: 1px solid #ebf0f8;
 }
 
 .top-page .faq-section #faq-container .q-a-item {
@@ -1630,7 +1620,19 @@ input[type=checkbox]:checked:before {
   display: block;
 }
 
-.top-page .faq-section #faq-container .q-a-item.is-active .question::after {
+.top-page .faq-section #faq-container .q-a-item.is-active .question {
+  border-radius: 8px 8px 0 0;
+}
+
+.top-page .faq-section #faq-container .q-a-item.is-active .question span {
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.top-page .faq-section #faq-container .q-a-item.is-active .question span:hover {
+  border-bottom: 1px solid #d3d3d300;
+}
+
+.top-page .faq-section #faq-container .q-a-item.is-active .question span::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -1640,9 +1642,24 @@ input[type=checkbox]:checked:before {
   text-align: left;
   line-height: 3.2rem;
   position: relative;
+  border-radius: 8px;
 }
 
-.top-page .faq-section #faq-container .q-a-item .question::after {
+.top-page .faq-section #faq-container .q-a-item .question span {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2.2rem;
+     -moz-column-gap: 2.2rem;
+          column-gap: 2.2rem;
+  padding: 2.4rem 0;
+}
+
+.top-page .faq-section #faq-container .q-a-item .question span::after {
   content: '';
   background-image: url(../img/down-mark.svg);
   background-position: center center;
@@ -1660,8 +1677,11 @@ input[type=checkbox]:checked:before {
   transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 }
 
-.top-page .faq-section #faq-container .q-a-item .question::before {
+.top-page .faq-section #faq-container .q-a-item .question span::before {
   content: 'Q';
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-bottom: 0.4rem;
   color: #000;
   text-align: center;
   font-family: "DIN 2014";
@@ -1683,20 +1703,57 @@ input[type=checkbox]:checked:before {
   background: #FFFE3B;
   border: 3px solid #000;
   border-radius: 90px;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-  -webkit-transition: -webkit-transform .2s ease-out;
-  transition: -webkit-transform .2s ease-out;
-  transition: transform .2s ease-out;
-  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 }
 
 .top-page .faq-section #faq-container .q-a-item .answer {
-  padding: 2.4rem 6.4rem 2.4rem 10.2rem;
+  padding: 0 3.2rem;
   display: none;
   color: #333;
-  line-height: 3.2rem;
+  background: #FFF;
+  line-height: 2.4rem;
   text-align: left;
+  border-radius: 0 0 8px 8px;
+}
+
+.top-page .faq-section #faq-container .q-a-item .answer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2.2rem;
+     -moz-column-gap: 2.2rem;
+          column-gap: 2.2rem;
+  padding: 2.4rem 0 4.0rem 0;
+}
+
+.top-page .faq-section #faq-container .q-a-item .answer span::before {
+  content: 'A';
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: auto;
+  padding-bottom: 0.4rem;
+  color: #FFF;
+  text-align: center;
+  font-family: "DIN 2014";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4.8rem;
+  width: 4.8rem;
+  background: #333;
+  border-radius: 90px;
 }
 
 .top-page .bottom-part {

@@ -1,5 +1,6 @@
 .top-page {
     margin-top: 11.4rem;
+    overflow: auto;
 
     .mainvisual {
         display: flex;
@@ -42,6 +43,10 @@
                     line-height: 3.0rem;
                 }
             }
+
+            .btn-wrapper {
+                text-align: center;
+            }
         }
 
         .img1 {
@@ -54,10 +59,11 @@
 
         .img2 {
             height: 66vh;
-            aspect-ratio: 628 / 779 !important;
+            aspect-ratio: 2261 / 2263 !important;
             position: absolute;
             top: 0;
             right: 0;
+            margin-right: -16vh;
         }
 
         .img3 {
@@ -592,14 +598,15 @@
             background: rgba(255, 255, 255, 0.01);
 
             li {
+                border-radius: 8px;
+
                 h4 {
                     cursor: pointer;
                     transition: all 0.35s ease;
                     border: 1px solid #FFF;
-                    border-radius: 8px;
                     background: #FFF;
                     margin-top: 2.4rem;
-                    padding: 2.4rem 3.2rem;
+                    padding: 0 3.2rem;
                     text-decoration: none;
                     display: flex;
                     align-items: center;
@@ -607,7 +614,7 @@
 
                     &:hover:not(.header) {
                         background-color: #ebf0f8;
-                        border: 1px solid rgb(211, 211, 211);
+                        border: 1px solid #ebf0f8;
                     }
                 }
             }
@@ -624,8 +631,15 @@
 
                 &.is-active {
                     .question {
-                        &::after {
-                            transform: rotate(180deg);
+                        border-radius: 8px 8px 0 0;
+                        span {
+                            border-bottom: 1px solid #D3D3D3;
+                            &:hover {
+                                border-bottom: 1px solid #d3d3d300;
+                            }
+                            &::after {
+                                transform: rotate(180deg);
+                            }
                         }
                     }
                 }
@@ -635,49 +649,87 @@
                     text-align: left;
                     line-height: 3.2rem;
                     position: relative;
-
-                    &::after {
-                        content: '';
-                        background-image: url(../img/down-mark.svg);
-                        background-position: center center;
-                        background-size: 1.6rem 1.6rem;
-                        background-repeat: no-repeat;
-                        display: block;
-                        margin-left: auto;
-                        height: 3.2rem;
-                        width: 3.2rem;
-                        transform: rotate(0);
-                        transition: transform .2s ease-out;
-                    }
-
-                    &::before {
-                        content: 'Q';
-                        color: #000;
-                        text-align: center;
-                        font-family: "DIN 2014";
-                        font-size: 3.2rem;
-                        font-style: normal;
-                        font-weight: bold;
-                        line-height: 100%;
+                    border-radius: 8px;
+                    span {
+                        width: 100%;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        height: 4.8rem;
-                        width: 4.8rem;
-                        background: #FFFE3B;
-                        border: 3px solid #000;
-                        border-radius: 90px;
-                        transform: rotate(0);
-                        transition: transform .2s ease-out;
+                        column-gap: 2.2rem;
+                        padding: 2.4rem 0;
+
+                        &::after {
+                            content: '';
+                            background-image: url(../img/down-mark.svg);
+                            background-position: center center;
+                            background-size: 1.6rem 1.6rem;
+                            background-repeat: no-repeat;
+                            display: block;
+                            margin-left: auto;
+                            height: 3.2rem;
+                            width: 3.2rem;
+                            transform: rotate(0);
+                            transition: transform .2s ease-out;
+                        }
+
+                        &::before {
+                            content: 'Q';
+                            flex-shrink: 0;
+                            padding-bottom: 0.4rem;
+                            color: #000;
+                            text-align: center;
+                            font-family: "DIN 2014";
+                            font-size: 3.2rem;
+                            font-style: normal;
+                            font-weight: bold;
+                            line-height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 4.8rem;
+                            width: 4.8rem;
+                            background: #FFFE3B;
+                            border: 3px solid #000;
+                            border-radius: 90px;
+                        }
                     }
                 }
 
                 .answer {
-                    padding: 2.4rem 6.4rem 2.4rem 10.2rem;
+                    padding: 0 3.2rem;
                     display: none;
                     color: #333;
-                    line-height: 3.2rem;
+                    background: #FFF;
+                    line-height: 2.4rem;
                     text-align: left;
+                    border-radius: 0 0 8px 8px;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 2.2rem;
+                        padding: 2.4rem 0 4.0rem 0;
+
+                        &::before {
+                            content: 'A';
+                            flex-shrink: 0;
+                            margin-bottom: auto;
+                            padding-bottom: 0.4rem;
+                            color: #FFF;
+                            text-align: center;
+                            font-family: "DIN 2014";
+                            font-size: 3.2rem;
+                            font-style: normal;
+                            font-weight: bold;
+                            line-height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 4.8rem;
+                            width: 4.8rem;
+                            background: #333;
+                            border-radius: 90px;
+                        }
+                    }
                 }
             }
         }
@@ -723,16 +775,20 @@
         padding: 6.4rem 0;
         text-align: center;
         background: #FFFE3B;
+
         .head-text {
             margin-bottom: 2.4rem;
         }
+
         .description {
             line-height: 3.2rem;
         }
     }
+
     .form-section {
         padding-top: 5.6rem;
         margin-bottom: 14.6rem;
+
         form {
             margin: 0 auto;
             max-width: 56rem;
@@ -745,12 +801,14 @@
         width: fit-content;
         margin: 20.2rem auto 2.4rem auto;
     }
+
     .description {
         width: fit-content;
         margin: 0 auto 6.2rem auto;
         line-height: 3.2rem;
         text-align: center;
     }
+
     .btn-black {
         width: fit-content;
         margin: 0 auto;

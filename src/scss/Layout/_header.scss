@@ -24,7 +24,12 @@ header {
             column-gap: 1.6rem;
         }
     }
-    .btn-black.animation-btn {
+
+    .btn-yellow.btn {
+        border: 3px solid #333;
+    }
+
+    .btn-black.btn {
         height: 5.0rem;
         white-space: nowrap;
     }

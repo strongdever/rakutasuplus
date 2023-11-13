@@ -8,6 +8,36 @@
     /* 100% */
 }
 
+.font-15-400 {
+    color: #333;
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.font-16-400 {
+    color: #333;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.font-16-500 {
+    color: #333;
+    text-align: center;
+    font-family: "Noto Sans CJK JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    /* 100% */
+}
+
 .font-16-700 {
     color: #333;
     font-family: "Noto Sans JP";
@@ -24,7 +54,8 @@
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 200% */
+    line-height: 100%;
+    /* 200% */
 }
 
 .font-18-700 {
@@ -39,7 +70,7 @@
 }
 
 .font-20-500 {
-    color: #222;
+    color: #333;
     font-family: "Noto Sans JP";
     font-size: 2.0rem;
     font-style: normal;
@@ -47,11 +78,23 @@
     line-height: 100%;
 }
 
+.font-20-700 {
+    color: #333;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 0.4px;
+}
+
 .font-22-700 {
     color: #333;
     text-align: center;
     font-family: "Noto Sans JP";
-    font-size: 22px;
+    font-size: 2.2rem;
     font-style: normal;
     font-weight: 700;
 }
@@ -63,7 +106,8 @@
     font-size: 2.4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 100% */
+    line-height: 100%;
+    /* 100% */
     letter-spacing: 0.48px;
 }
 
@@ -77,6 +121,39 @@
     /* 112.5% */
 }
 
+.font-36-700 {
+    color: #333;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.72px;
+}
+
+.font-40-700 {
+    color: #333;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 4.0rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.8px;
+}
+
+.font-40-700-din {
+    color: #000;
+    text-align: center;
+    font-family: "DIN 2014";
+    font-size: 4.0rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 100%;
+    /* 100% */
+}
+
 .font-54-900 {
     color: #222;
     font-family: "Noto Sans JP";
@@ -88,12 +165,207 @@
     letter-spacing: 0.54px;
 }
 
+.font-56-700-din {
+    color: #333;
+    font-family: "DIN 2014";
+    font-size: 5.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+}
+
+.font-64-700-din {
+    color: #333;
+    text-align: center;
+    font-family: "DIN 2014";
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 100% */
+    letter-spacing: 1.28px;
+}
+
 .font-92-800 {
     color: #222;
-    font-family: "DIN 2014 Bold";
+    font-family: "DIN 2014";
     font-size: 9.2rem;
     font-style: normal;
-    font-weight: 800;
-    line-height: 100%; /* 100% */
+    font-weight: bold;
+    line-height: 100%;
+    /* 100% */
     letter-spacing: -0.46px;
+}
+
+.underline-wrapper {
+    display: flex !important;
+    align-items: baseline;
+    position: relative;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+
+    .underline-text {
+        display: flex;
+        align-items: baseline;
+        position: relative;
+
+        div {
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            background: #FFFE3B;
+            width: 100%;
+            height: 14px;
+            bottom: -4px;
+            left: 0;
+            z-index: 1;
+        }
+
+        .underline-14 {
+            height: 14px;
+        }
+
+        .underline-8 {
+            height: 8px;
+            bottom: 3px;
+        }
+    }
+}
+
+.btn-wrapper {
+    display: block;
+    position: relative;
+    width: fit-content;
+    text-align: center;
+
+    p {
+        margin-bottom: 1.2rem;
+    }
+
+    .animation-btn {
+        width: 37.2rem;
+        height: 9.0rem;
+
+        span {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.main-form {
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.4rem;
+    }
+
+    .vertical-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .horizontal-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.6rem;
+    }
+    .input-privacy {
+        width: fit-content;
+        margin: 1rem auto 0 auto;
+        a {
+            text-decoration: underline;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        label {
+            display: flex;
+        }
+    }
+
+    .checkbox-item {
+        -webkit-row-gap: 2.4rem;
+        -moz-row-gap: 2.4rem;
+        row-gap: 2.4rem;
+    }
+
+    textarea {
+        line-height: 2.4rem;
+    }
+
+    .btn-black {
+        padding: 2.3rem 6.4rem;
+        height: 6.4rem;
+        width: fit-content;
+    }
+    .btns-wrapper {
+        margin: 2.6rem auto 0 auto;
+    }
+    &.main-confirm {
+        input, textarea {
+            padding: 0;
+            border: unset;
+            font-weight: 400;
+        }
+        .name-wrapper {
+            .horizontal-wrapper {
+                justify-content: flex-start;
+                input {
+                    width: 3.4rem;
+                }
+            }
+        }
+    }
+}
+
+input[type=checkbox] {
+    position: relative;
+    border-radius: 4px;
+    border: 1.5px solid #000;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 2rem !important;
+    width: 2rem !important;
+    -webkit-appearance: none;
+    opacity: .5;
+    margin: 0 0.8rem 0 0;
+}
+
+input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+input[type=checkbox]:checked {
+    background-color: #FFFE3B;
+    border: 1.5px solid #000;
+    opacity: 1;
+}
+
+input[type=checkbox]:checked:before {
+    content: '';
+    position: absolute;
+    right: calc(50% + 0rem);
+    top: 50%;
+    width: 6px;
+    height: 13px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
 }

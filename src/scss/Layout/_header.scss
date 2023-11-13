@@ -1,12 +1,18 @@
 header {
+    width: 100%;
+    top: 0;
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: center;
     height: 11.4rem;
     background: #F9F9F9;
     padding-left: 8.0rem;
     padding-right: 8.0rem;
-    
+    z-index:  999;
+    &.contact-header {
+        background-color: #FFF;
+    }
     .header-wrapper {
         width: 100%;
         display: flex;
@@ -17,5 +23,9 @@ header {
             align-items: center;
             column-gap: 1.6rem;
         }
+    }
+    .btn-black.animation-btn {
+        height: 5.0rem;
+        white-space: nowrap;
     }
 }

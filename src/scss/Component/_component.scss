@@ -1,5 +1,5 @@
-.animation-btn:link,
-.animation-btn:visited {
+.animation-btn {
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
@@ -15,8 +15,7 @@
     transition: all 1s ease;
 }
 
-.animation-btn:link:after,
-.animation-btn:visited:after {
+.animation-btn:after {
     content: "";
     position: absolute;
     height: 0%;
@@ -27,20 +26,17 @@
     transition: all 0.4s ease 0s;
 }
 
-.animation-btn:link span,
-.animation-btn:visited span {
+.animation-btn span {
     position: relative;
     z-index: 3;
     transition: all 0.4s ease 0s;
 }
 
-.animation-btn:link:hover span,
-.animation-btn:visited:hover span {
+.animation-btn:hover span {
     text-shadow: none;
 }
 
-.animation-btn:link:hover:after,
-.animation-btn:visited:hover:after {
+.animation-btn:hover:after{
     height: 450%;
 }
 
@@ -48,15 +44,13 @@
     background: #FFFE3B;
     border: 2px solid #333;
 }
-
 .btn-yellow span {
     color: #333;
 }
-
 .btn-yellow:hover span {
     color: #FFF;
+    z-index: 15;
 }
-
 .btn-yellow:after {
     background: #333;
     opacity: .5;
@@ -66,7 +60,6 @@
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
 }
-
 .btn-yellow:hover:after {
     height: 140%;
     opacity: 1;
@@ -74,17 +67,19 @@
 
 .btn-black {
     background: #333;
-    border: 2px solid #333;
+    border: 3px solid #333;
 }
-
+.btn-black.animation-btn {
+    height: 6.4rem;
+    padding: 1.6rem 6.4rem;
+}
 .btn-black span {
     color: #FFF;
 }
-
 .btn-black:hover span {
     color: #333;
+    z-index: 15;
 }
-
 .btn-black:after {
     background: #FFFE3B;
     opacity: .5;
@@ -94,8 +89,75 @@
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
 }
-
 .btn-black:hover:after {
+    height: 140%;
+    opacity: 1;
+}
+
+.btn-white {
+    background: #FFF;
+    border: 3px solid #333;
+}
+.btn-white.animation-btn {
+    height: 6.4rem;
+}
+.btn-white span {
+    color: #333;
+}
+.btn-white:hover span {
+    color: #333;
+    z-index: 15;
+}
+.btn-white:after {
+    background: #FFFE3B;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+}
+.btn-white:hover:after {
+    height: 140%;
+    opacity: 1;
+}
+
+.animation-btn.btn-faq {
+    border-radius: 8px;
+    padding: 1.6rem 4.0rem;
+    width: fit-content;
+}
+.btn-faq {
+    white-space: nowrap;
+    background: #333;
+    border: 3px solid #333;
+}
+.btn-faq.active {
+    background: #FFF;
+}
+.btn-faq.active:after {
+    background: unset;
+}
+.btn-faq span {
+    color: #FFF;
+}
+.btn-faq.active span {
+    color: #333;
+}
+.btn-faq:hover span {
+    color: #333;
+    z-index: 15;
+}
+.btn-faq:after {
+    background: #FFF;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+}
+.btn-faq:hover:after {
     height: 140%;
     opacity: 1;
 }

@@ -16,33 +16,25 @@
 }
 
 @font-face {
-    font-family: 'DIN 2014 Demi';
-    src: url('DIN2014-DemiBold.ttf') format('truetype');
+    font-family: 'DIN 2014';
+    src: url('DIN2014-Bold.eot');
+    src: local('DIN 2014 Bold'), local('DIN2014-Bold'),
+        url('DIN2014-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DIN2014-Bold.woff') format('woff'),
+        url('DIN2014-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
-    font-weight: 300;
 }
 
 @font-face {
-    font-family: 'DIN 2014 Bold';
-    src: url('DIN2014-Bold.ttf') format('truetype');
+    font-family: 'DIN 2014';
+    src: url('DIN2014-Regular.eot');
+    src: local('DIN 2014 Regular'), local('DIN2014-Regular'),
+        url('DIN2014-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DIN2014-Regular.woff') format('woff'),
+        url('DIN2014-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	/* お好きな名前にしましょう */
-	src: url('Montserrat-Regular.ttf');
-	/* IE9以上用 */
-	src: url('Montserrat-Regular.ttf') format('embedded-opentype'),
-		/* IE8以前用 */
-		url('Montserrat-Regular.ttf') format('ttf'),
-		/* モダンブラウザ用 */
-		url('Montserrat-Regular.ttf') format('truetype');
-	/* iOS, Android用 */
-	font-weight: normal;
-	/* 念の為指定しておきます */
-	font-style: normal;
 }
 
 @font-face {

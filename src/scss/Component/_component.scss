@@ -65,6 +65,7 @@
 }
 
 .btn-yellow.btn {
+    height: 5.0rem;
     background: #FFFE3B;
     border: 3px solid #333;
     color: #333;
@@ -78,10 +79,14 @@
 .btn-yellow-b.btn {
     background: #FFFE3B;
     border: 4px solid #333;
-    padding: 3.3rem 8.6rem;
+    padding: 0 8.6rem;
     width: fit-content;
     height: 9.0rem;
     color: #333;
+    @include media("sp") {
+        width: 100%;
+        height: 5.6rem;
+    }
 }
 
 .btn-yellow-b.btn:hover span {
@@ -128,6 +133,10 @@
     background: #333;
     border: 3px solid #333;
     border-radius: 8px;
+    @include media("sp") {
+        height: 4.0rem;
+        padding: 1.3rem 1.6rem;
+    }
 }
 .btn-faq.btn.active {
     background: #FFF;

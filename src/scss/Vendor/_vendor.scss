@@ -1460,8 +1460,8 @@
 .container-lg,
 .container-xl {
     width: 100%;
-    padding-right: 2.0rem;
-    padding-left: 2.0rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1473,7 +1473,9 @@
 
 @include media('sp') {
     .container {
-        max-width: 100%;
+        max-width: 100% ;
+        width: 100% !important;
+        margin: 0;
     }
 }
 

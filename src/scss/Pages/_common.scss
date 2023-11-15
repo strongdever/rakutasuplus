@@ -266,6 +266,18 @@
     text-align: center;
     margin: 0 auto;
 
+    &.pc {
+        @include media("sp") {
+            display: none !important;
+        }
+    }
+
+    &.sp {
+        @include media("pc") {
+            display: none !important;
+        }
+    }
+
     .underline-text {
         display: flex;
         align-items: baseline;
